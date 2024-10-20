@@ -17,9 +17,10 @@ bool Student::Login(string LoginId, string LoginPassword)
 {
 	User* user = FindUserToLogin(LoginId, LoginPassword);
 	if (user == nullptr) {
-		return true;
+		// Retrieve full name
+		return true; // Login successful
 	}
-	return false;
+	return false; // Login failed
 }
 bool Student::DeleteStudent(string username)
 {
@@ -132,6 +133,7 @@ User* Student::FindUserToLogin(string LoginId, string LoginPassword)
 {
 	for (auto& account : users) {
 		if (account.RegisterID == LoginId && account.RegisterPassword == LoginPassword) {
+			
 			return &account;
 		}
 	}

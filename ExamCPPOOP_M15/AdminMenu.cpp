@@ -96,8 +96,7 @@ void AdminMenu::CreateAccount()
     getline(cin, address);
     cout << "Enter Phone: ";
     getline(cin, phone);
-
-    student.Register(RegisterID, RegisterPassword, fullname, address, phone); // Call the Register function
+    admin.CreateAccount(RegisterID, RegisterPassword, fullname, address, phone); // Call the Register function
     ModifyUserMenu(); // Return to the menu after registration
 }
 
@@ -107,95 +106,17 @@ void AdminMenu::DeleteAccount()
 
     cout << "Enter username to delete: ";
     cin >> username;
-
-    // Assuming the Student class has a method to delete a user
-    if (student.DeleteStudent(username)) {
-        cout << "Account deleted successfully!" << endl;
-    }
-    else {
-        cout << "Error: Account deletion failed. User may not exist." << endl;
-    }
-
-    ModifyUserMenu(); // Return to the menu
+    admin.DeleteAccount(username);
+    MainMenu();
 }
+
 
 void AdminMenu::ChangeUserInformation()
 {
     string username;
     cout << "Enter username to modify: ";
     cin >> username;
-
-    // Check if the user exists
-    if (!student.UserExists(username)) {
-        cout << "Error: User does not exist." << endl;
-        ModifyUserMenu(); // Return to the menu
-        return;
-    }
-
-    int choice;
-    cout << "============ CHANGE USER INFORMATION ============" << endl;
-    cout << "1) Change ID" << endl;
-    cout << "2) Change Password" << endl;
-    cout << "3) Change Full Name" << endl;
-    cout << "4) Change Address" << endl;
-    cout << "5) Change Phone" << endl;
-    cout << "6) Back to Modify User Menu" << endl;
-    cout << "Enter your choice: ";
-    cin >> choice;
-
-    switch (choice) {
-    case 1: {
-        string newID;
-        cout << "Enter new Register ID: ";
-        cin >> newID;
-        student.UpdateUserID(username, newID); // Method to update user ID
-        cout << "User ID updated successfully!" << endl;
-        break;
-    }
-    case 2: {
-        string newPassword;
-        cout << "Enter new password: ";
-        cin >> newPassword;
-        student.UpdateUserPassword(username, newPassword); // Method to update user password
-        cout << "Password updated successfully!" << endl;
-        break;
-    }
-    case 3: {
-        string newFullName;
-        cout << "Enter new full name: ";
-        cin.ignore();
-        getline(cin, newFullName);
-        student.UpdateUserFullName(username, newFullName); // Method to update full name
-        cout << "Full name updated successfully!" << endl;
-        break;
-    }
-    case 4: {
-        string newAddress;
-        cout << "Enter new address: ";
-        cin.ignore();
-        getline(cin, newAddress);
-        student.UpdateUserAddress(username, newAddress); // Method to update address
-        cout << "Address updated successfully!" << endl;
-        break;
-    }
-    case 5: {
-        string newPhone;
-        cout << "Enter new phone number: ";
-        cin.ignore();
-        getline(cin, newPhone);
-        student.UpdateUserPhone(username, newPhone); // Method to update phone
-        cout << "Phone number updated successfully!" << endl;
-        break;
-    }
-    case 6:
-        // Go back to the modify user menu
-        ModifyUserMenu();
-        return;
-    default:
-        cout << "Invalid option. Please try again." << endl;
-        ChangeUserInformation();
-        break;
-    }
+    admin.ChangeUserInformation(username);
     MainMenu();
 }
 

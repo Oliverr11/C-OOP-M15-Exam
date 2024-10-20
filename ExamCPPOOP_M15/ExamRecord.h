@@ -9,10 +9,11 @@ class ExamRecord
 {
 public : 
 	string studentID;
+	string studentName; 
 	string category;
 	int score;
 	ExamRecord() = default;
-	ExamRecord(string id , string category ,int score);
+	ExamRecord(string id , string category , string studentName,int score);
 
 	json toJson();
 	ExamRecord fromJson(json j);

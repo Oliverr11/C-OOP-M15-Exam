@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Student.h"
 #include <random>
+#include <filesystem>
 
 using namespace std;
 class StudentMenu
@@ -9,7 +10,7 @@ class StudentMenu
 public : 
 	Student student;
 	string selectedCategory;
-	string loginId, password;
+	string loginId, password, name;
 
 	int totalQuestions = 0; // Total questions in the exam
 	int correctAnswers = 0; // Count of correct answers

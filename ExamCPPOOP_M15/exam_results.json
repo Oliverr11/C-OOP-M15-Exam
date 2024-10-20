@@ -1,42 +1,14 @@
 [
     {
         "category": "Math",
-        "id": "kim",
-        "score": 6
-    },
-    {
-        "category": "Math",
-        "id": "kim",
-        "score": 3
-    },
-    {
-        "category": "Math",
-        "id": "kim",
-        "score": 5
-    },
-    {
-        "category": "Physics",
-        "id": "kim",
-        "score": 1
-    },
-    {
-        "category": "Math",
-        "id": "test",
+        "id": "Test",
+        "name": "",
         "score": 4
     },
     {
         "category": "Math",
-        "id": "kim",
-        "score": 4
-    },
-    {
-        "category": "Math",
-        "id": "kim",
-        "score": 9
-    },
-    {
-        "category": "Programming",
-        "id": "test",
-        "score": 1
+        "id": "k",
+        "name": "",
+        "score": 2
     }
 ]

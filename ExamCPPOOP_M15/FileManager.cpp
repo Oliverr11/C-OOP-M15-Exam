@@ -24,17 +24,17 @@ json FileManager::LoadUserInformationDataJson()
 
 void FileManager::SaveExamRecord(vector<ExamRecord> records)
 {
-	json j;
-	for (auto record : records) {
-		j.push_back(record.toJson());
-	}
 	ofstream file("exam_results.json");
 	if (file.is_open()) {
-		file << j.dump(4);
+		json j;
+		for (auto record : records) {
+			j.push_back(record.toJson());
+		}
+		file << j.dump(4); // Pretty print with an indent of 4 spaces
 		file.close();
 	}
 	else {
-		cout << "Error: Unable to open file for writing..." << endl;
+		cout << "Error opening file for writing exam results." << endl;
 	}
 }
 
@@ -44,16 +44,13 @@ void FileManager::LoadExamRecord(vector<ExamRecord> records)
 	if (file.is_open()) {
 		json j;
 		file >> j;
-		records.clear(); // Clear existing records if necessary
-		for (const auto& recordJson : j) {
-			ExamRecord e;
-			e.fromJson(recordJson); // Assuming fromJson is a static method
-			records.push_back(e);
+		for (const auto& record : j) {
+			records.push_back(ExamRecord(record["id"], record["category"], record["name"], record["score"]));
 		}
 		file.close();
 	}
 	else {
-		cout << "Error: Unable to open file for reading." << endl;
+		cout << "Error opening exam results file." << endl;
 	}
 }
 

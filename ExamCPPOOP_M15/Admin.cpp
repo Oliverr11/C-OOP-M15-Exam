@@ -18,6 +18,187 @@ bool Admin::Login(string loginId, string loginpassword)
     }
 }
 
+void Admin::CreateAccount(string RegisterID, string RegisterPassword, string fullname, string address, string phone)
+{
+    student.Register(RegisterID, RegisterPassword, fullname, address, phone); // Call the Register function
+}
+
+void Admin::DeleteAccount(string userName)
+{
+    if (student.DeleteStudent(userName)) {
+        // Call a method to delete the student's exam records
+        if (DeleteExamRecords(userName)) {
+            cout << "Account and exam records deleted successfully!" << endl;
+        }
+        else {
+            cout << "Account deleted, but failed to delete exam records." << endl;
+        }
+    }
+    else {
+        cout << "Error: Account deletion failed. User may not exist." << endl;
+    }
+}
+
+bool Admin::DeleteExamRecords(string username)
+{
+    ifstream resultFile("exam_results.json");
+    if (!resultFile.is_open()) {
+        cout << "Error opening exam_results.json!" << endl;
+        return false;
+    }
+
+    json results;
+    resultFile >> results;
+    resultFile.close();
+
+    // Filter out the records for the user being deleted
+    json updatedResults;
+    bool recordsDeleted = false;
+
+    for (const auto& record : results) {
+        if (record["id"] != username) { // Assuming 'id' holds the username
+            updatedResults.push_back(record);
+        }
+        else {
+            recordsDeleted = true; // Found and deleted record for the user
+        }
+    }
+
+    // Save updated results back to the file
+    ofstream outFile("exam_results.json");
+    if (outFile.is_open()) {
+        outFile << updatedResults.dump(4);
+        outFile.close();
+        return recordsDeleted; // Return true if any records were deleted
+    }
+    else {
+        cout << "Error: Unable to open file for writing..." << endl;
+        return false;
+    }
+}
+
+void Admin::ChangeUserInformation(string userName)
+{
+    // Check if the user exists
+    if (!student.UserExists(userName)) {
+        cout << "Error: User does not exist." << endl;
+        return;
+    }
+
+    int choice;
+    string oldName = student.fullName;
+    string oldId = student.RegisterID;
+    cout << "============ CHANGE USER INFORMATION ============" << endl;
+    cout << "1) Change ID" << endl;
+    cout << "2) Change Password" << endl;
+    cout << "3) Change Full Name" << endl;
+    cout << "4) Change Address" << endl;
+    cout << "5) Change Phone" << endl;
+    cout << "6) Back" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice) {
+    case 1: {
+        string newID;
+        cout << "Enter new Register ID: ";
+        cin >> newID;
+        student.UpdateUserID(userName, newID);
+        cout << "Calling UpdateExamRecords with oldID: " << userName << ", newID: " << newID << ", oldName: " << oldName << ", newName: " << oldName << endl;
+        UpdateExamRecords(userName, newID, oldName, oldName);
+        cout << "User ID updated successfully!" << endl;
+        break;
+    }
+    case 2: {
+        string newPassword;
+        cout << "Enter new password: ";
+        cin >> newPassword;
+        student.UpdateUserPassword(userName, newPassword); // Method to update user password
+        cout << "Password updated successfully!" << endl;
+        break;
+    }
+    case 3: {
+        string newFullName;
+        cout << "Enter new full name: ";
+        cin.ignore();
+        getline(cin, newFullName);
+        student.UpdateUserFullName(userName, newFullName); // Method to update full name
+        UpdateExamRecords(oldId, oldId, oldName, newFullName); // Update name only
+        cout << "Full name updated successfully!" << endl;
+        break;
+    }
+    case 4: {
+        string newAddress;
+        cout << "Enter new address: ";
+        cin.ignore();
+        getline(cin, newAddress);
+        student.UpdateUserAddress(userName, newAddress); // Method to update address
+        cout << "Address updated successfully!" << endl;
+        break;
+    }
+    case 5: {
+        string newPhone;
+        cout << "Enter new phone number: ";
+        cin.ignore();
+        getline(cin, newPhone);
+        student.UpdateUserPhone(userName, newPhone); // Method to update phone
+        cout << "Phone number updated successfully!" << endl;
+        break;
+    }
+    case 6:
+        return;
+    default:
+        cout << "Invalid option. Please try again." << endl;
+        ChangeUserInformation(userName);
+        break;
+    }
+}
+void Admin::UpdateExamRecords(string oldID, string newID, string oldName, string newName)
+{
+    ifstream resultFile("exam_results.json");
+    if (!resultFile.is_open()) {
+        cout << "Error opening exam_results.json!" << endl;
+        return;
+    }
+
+    json results;
+    resultFile >> results;
+    resultFile.close();
+
+    bool updated = false;
+
+    // Iterate through each record and update the necessary fields
+    for (auto& record : results) {
+        cout << "Checking record with ID: " << record["id"] << " and Name: " << record["name"] << endl;
+        if (record["id"] == oldID) {
+            cout << "Updating ID from " << oldID << " to " << newID << endl;
+            record["id"] = newID; // Update ID
+            updated = true;
+        }
+        if (record["name"] == oldName) {
+            cout << "Updating name from " << oldName << " to " << newName << endl;
+            record["name"] = newName; // Update name
+            updated = true;
+        }
+    }
+
+    if (updated) {
+        ofstream outFile("exam_results.json");
+        if (outFile.is_open()) {
+            outFile << results.dump(4); // Pretty print with an indent of 4 spaces
+            outFile.close();
+            cout << "Exam records updated successfully!" << endl;
+        }
+        else {
+            cout << "Error: Unable to open file for writing..." << endl;
+        }
+    }
+    else {
+        cout << "No records updated." << endl;
+    }
+}
+
+
 void Admin::addCategory(string category)
 {
 
@@ -70,13 +251,13 @@ void Admin::displayCategories()
     }
 }
 
-void Admin::addExamRecord(const string& studentId, const string& name, int score)
+void Admin::addExamRecord(string studentId, string category, string name, int score)
 {
-    ExamRecord newRecord(studentId, name, score);
+    ExamRecord newRecord(studentId, category, name, score); // Ensure name is being passed
     vector<ExamRecord> records;
     fm.LoadExamRecord(records); // Load existing records
-    records.push_back(newRecord);
-    fm.SaveExamRecord(records);
+    records.push_back(newRecord); // Add the new record
+    fm.SaveExamRecord(records); // Save updated records
     cout << "Exam record added for " << name << " with score: " << score << endl;
 }
 

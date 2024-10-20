@@ -51,7 +51,6 @@ void StudentMenu::ExamMenu()
         break;
     }   
 }
-
 void StudentMenu::TakeExam()
 {
     string category;
@@ -141,7 +140,7 @@ void StudentMenu::TakeExam()
         }
     }
 
-    // After completing the exam or reaching the maximum questions
+    // After completing the exam
     cout << "Exam completed! You scored " << score << " out of " << questionCount << "." << endl;
 
     // Resetting state file
@@ -151,6 +150,7 @@ void StudentMenu::TakeExam()
     ExamRecord record;
     record.studentID = loginId; // Use the logged-in student's ID
     record.category = category;
+    record.studentName = name; // Include full name
     record.score = score;
 
     // Load existing records
@@ -251,7 +251,8 @@ bool StudentMenu::Login()
     cout << "Enter Your ID : "; cin >> loginId;
     cout << "Enter Your Password : "; cin >> password;
     if (!student.Login(loginId, password)) {
-        cout << "Login Successfully." << endl;
+        
+        cout << "Login successfully. " << endl;
         ExamMenu();
         return true;
     }
