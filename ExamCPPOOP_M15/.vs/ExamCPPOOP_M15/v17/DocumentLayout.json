@@ -1,0 +1,426 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:StudentMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:ExamRecord.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\exam_results.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:exam_results.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:StudentMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:FileManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:FileManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Test.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Question.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:ExamRecord.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Admin.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Admin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:AdminMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:MainMenu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Student.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:MainMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\tests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Student.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:User.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Question.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:AdminMenu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:Test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamCPPOOP_M15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4DBEC23-8C75-40D8-A48E-AACCC0D8BB26}|ExamCPPOOP_M15.vcxproj|solutionrelative:ExamCPPOOP_M15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\admin.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Student.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.h",
+              "RelativeDocumentMoniker": "Student.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.h",
+              "RelativeToolTip": "Student.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-15T10:13:38.313Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Admin.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.cpp",
+              "RelativeDocumentMoniker": "Admin.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.cpp",
+              "RelativeToolTip": "Admin.cpp",
+              "ViewState": "AQIAADQAAAAAAAAAAAAewD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T01:23:51.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileManager.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.cpp",
+              "RelativeDocumentMoniker": "FileManager.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.cpp",
+              "RelativeToolTip": "FileManager.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-14T15:26:52.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentMenu.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.cpp",
+              "RelativeDocumentMoniker": "StudentMenu.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.cpp",
+              "RelativeToolTip": "StudentMenu.cpp",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAAAKQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-19T13:32:35.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExamRecord.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.cpp",
+              "RelativeDocumentMoniker": "ExamRecord.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.cpp",
+              "RelativeToolTip": "ExamRecord.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAewAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-19T19:14:05.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "exam_results.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\exam_results.json",
+              "RelativeDocumentMoniker": "exam_results.json",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\exam_results.json",
+              "RelativeToolTip": "exam_results.json",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-19T19:17:03.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentMenu.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.h",
+              "RelativeDocumentMoniker": "StudentMenu.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\StudentMenu.h",
+              "RelativeToolTip": "StudentMenu.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAewBUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-19T05:42:13.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FileManager.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.h",
+              "RelativeDocumentMoniker": "FileManager.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\FileManager.h",
+              "RelativeToolTip": "FileManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-14T15:25:47.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "users.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\users.json",
+              "RelativeDocumentMoniker": "users.json",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\users.json",
+              "RelativeToolTip": "users.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAACxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-19T18:13:54.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExamRecord.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.h",
+              "RelativeDocumentMoniker": "ExamRecord.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamRecord.h",
+              "RelativeToolTip": "ExamRecord.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-19T19:36:34.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Test.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.h",
+              "RelativeDocumentMoniker": "Test.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.h",
+              "RelativeToolTip": "Test.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T17:09:51.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Question.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.h",
+              "RelativeDocumentMoniker": "Question.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.h",
+              "RelativeToolTip": "Question.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T17:19:18.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Admin.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.h",
+              "RelativeDocumentMoniker": "Admin.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Admin.h",
+              "RelativeToolTip": "Admin.h",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewBwAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T01:18:49.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminMenu.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.cpp",
+              "RelativeDocumentMoniker": "AdminMenu.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.cpp",
+              "RelativeToolTip": "AdminMenu.cpp",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAuwIYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T09:36:52.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainMenu.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.cpp",
+              "RelativeDocumentMoniker": "MainMenu.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.cpp",
+              "RelativeToolTip": "MainMenu.cpp",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAewBkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-19T05:46:41.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Student.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.cpp",
+              "RelativeDocumentMoniker": "Student.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Student.cpp",
+              "RelativeToolTip": "Student.cpp",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAewGwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T17:09:30.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainMenu.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.h",
+              "RelativeDocumentMoniker": "MainMenu.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\MainMenu.h",
+              "RelativeToolTip": "MainMenu.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-19T05:42:05.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "tests.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\tests.json",
+              "RelativeDocumentMoniker": "tests.json",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\tests.json",
+              "RelativeToolTip": "tests.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T20:16:10.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.cpp",
+              "RelativeDocumentMoniker": "User.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.cpp",
+              "RelativeToolTip": "User.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-19T08:01:08.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.h",
+              "RelativeDocumentMoniker": "User.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\User.h",
+              "RelativeToolTip": "User.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-13T04:13:31.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Question.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.cpp",
+              "RelativeDocumentMoniker": "Question.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Question.cpp",
+              "RelativeToolTip": "Question.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T20:00:53.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "admin.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\admin.json",
+              "RelativeDocumentMoniker": "admin.json",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\admin.json",
+              "RelativeToolTip": "admin.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-18T10:44:07.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminMenu.h",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.h",
+              "RelativeDocumentMoniker": "AdminMenu.h",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\AdminMenu.h",
+              "RelativeToolTip": "AdminMenu.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-18T09:35:32.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Test.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.cpp",
+              "RelativeDocumentMoniker": "Test.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\Test.cpp",
+              "RelativeToolTip": "Test.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-18T20:00:30.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ExamCPPOOP_M15.cpp",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamCPPOOP_M15.cpp",
+              "RelativeDocumentMoniker": "ExamCPPOOP_M15.cpp",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ExamCPPOOP_M15\\ExamCPPOOP_M15.cpp",
+              "RelativeToolTip": "ExamCPPOOP_M15.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-13T04:13:20.999Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
