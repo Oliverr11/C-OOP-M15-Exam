@@ -16,7 +16,6 @@ public :
 	//modify user
 	void CreateAccount();
 	void DeleteAccount();
-	bool DeleteExamRecords(string username);
 	void ChangeUserInformation();
 
 	//manage test
@@ -28,6 +27,6 @@ public :
 	void displayCategories();
 
 	void Login();
-	
+
 };
 

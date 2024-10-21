@@ -1,3 +1,7 @@
-﻿  Admin.cpp
-C:\Users\ASUS\Desktop\Test GitHub\C++ OOP M15 Project\C-OOP-M15-Exam\ExamCPPOOP_M15\Student.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+﻿  Student.cpp
+C:\Users\ASUS\Desktop\Test GitHub\C++ OOP M15 Project\C-OOP-M15-Exam\ExamCPPOOP_M15\Student.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  StudentMenu.cpp
+C:\Users\ASUS\Desktop\Test GitHub\C++ OOP M15 Project\C-OOP-M15-Exam\ExamCPPOOP_M15\Student.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\Visual Studio 2022\VC\Tools\MSVC\14.40.33807\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Generating Code...
   ExamCPPOOP_M15.vcxproj -> C:\Users\ASUS\Desktop\Test GitHub\C++ OOP M15 Project\C-OOP-M15-Exam\ExamCPPOOP_M15\x64\Debug\ExamCPPOOP_M15.exe

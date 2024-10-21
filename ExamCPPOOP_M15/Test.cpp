@@ -29,6 +29,15 @@ double Test::calculateScore(int correctCount)
     return (static_cast<double>(correctCount) / questions.size()) * 12;
 }
 
+void Test::displayCategories(const vector<Test>& tests)
+{
+    cout << "Available Categories:" << endl;
+    for (size_t i = 0; i < tests.size(); ++i) {
+        cout << i + 1 << ": " << tests[i].category << endl;
+    }
+}
+
+
 json Test::toJson()
 {
     json j;

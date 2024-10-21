@@ -228,23 +228,39 @@ void Admin::deleteCategory(int testIndex)
 
 void Admin::deleteQuestionFromCategory(int testIndex, int questionIndex)
 {
+    cout << "Enter the test index to delete a question from (0 for first test): ";
+    cin >> testIndex;
+
     if (testIndex < 0 || testIndex >= tests.size()) {
-        throw out_of_range("Test index is out of range.");
+        cerr << "Error: Invalid test index." << endl;
+        return;
     }
+
+    cout << "Questions in category \"" << tests[testIndex].category << "\":" << endl;
+    for (int i = 0; i < tests[testIndex].questions.size(); ++i) {
+        cout << i << ": " << tests[testIndex].questions[i].questionText << endl;
+    }
+
+    cout << "Enter the question index to delete (0 for first question): ";
+    cin >> questionIndex;
+
     if (questionIndex < 0 || questionIndex >= tests[testIndex].questions.size()) {
-        throw out_of_range("Question index is out of range.");
+        cerr << "Error: Invalid question index." << endl;
+        return;
     }
-    tests[testIndex].questions.erase(tests[testIndex].questions.begin() + questionIndex); 
-    fm.saveTests(tests, fileName); 
-    cout << "Question deleted successfully!" << endl;
+
+    try {
+        deleteQuestionFromCategory(testIndex, questionIndex);
+    }
+    catch (const out_of_range& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
 }
 
 void Admin::displayCategories()
 {
-    cout << "Available Categories:" << endl;
-    for (int i = 0; i < tests.size(); ++i) {
-        cout << i + 1 << ": " << tests[i].category << endl;
-    }
+    Test test;
+    test.displayCategories(tests);
 }
 
 void Admin::addExamRecord(string studentId, string category, string name, int score)

@@ -16,6 +16,8 @@ void Student::Register(string RegisterID, string RegisterPassword, string fullna
 bool Student::Login(string LoginId, string LoginPassword)
 {
 	User* user = FindUserToLogin(LoginId, LoginPassword);
+    RegisterID = user->RegisterID; // Set the ID
+    fullName = user->fullName;      // Set the full name
 	if (user == nullptr) {
 		return true; 
 	}
@@ -47,7 +49,7 @@ void Student::UpdateUserPassword(string username, string newPassword)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.RegisterPassword = newPassword; 
+			user.RegisterPassword = newPassword;    
 			Save(); 
 			return;
 		}
@@ -87,6 +89,163 @@ void Student::UpdateUserPhone(string username, string newPhone)
 	}
 }
 
+void Student::TakeExam(string category)
+{
+    ifstream file("tests.json");
+    if (!file.is_open()) {
+        cout << "Error opening tests.json!" << endl;
+        return;
+    }
+
+    json tests;
+    file >> tests;
+
+    json selectedCategory;
+    bool categoryFound = false;
+
+    for (const auto& test : tests) {
+        if (test["category"] == category) {
+            selectedCategory = test["questions"];
+            categoryFound = true;
+            break;
+        }
+    }
+
+    if (!categoryFound) {
+        cout << "Category not found." << endl;
+        return;
+    }
+
+    // Load the exam state if it exists
+    int currentIndex = 0;
+    int score = 0;
+    ifstream stateFile("exam_state.json");
+
+    if (stateFile.is_open()) {
+        json state;
+        stateFile >> state;
+        currentIndex = state["currentIndex"].get<int>();
+        score = state["score"].get<int>();
+        stateFile.close();
+    }
+
+    int questionCount = min(static_cast<int>(selectedCategory.size()), 12);
+    int maxQuestions = questionCount - currentIndex;
+
+    for (int i = currentIndex; i < questionCount && i < currentIndex + maxQuestions; ++i) {
+        const auto& question = selectedCategory[i];
+        cout << question["questionText"] << endl;
+
+        for (size_t j = 0; j < question["options"].size(); ++j) {
+            cout << j + 1 << ". " << question["options"][j] << endl;
+        }
+
+        cout << "Enter your answer (1-" << question["options"].size() << "): ";
+        int answer;
+        cin >> answer;
+
+        if (answer < 1 || answer > question["options"].size()) {
+            cout << "Invalid answer! Please enter a number between 1 and " << question["options"].size() << "." << endl;
+            continue;
+        }
+
+        int correctIndex = question["correctAnswer"].get<int>();
+        if (answer - 1 == correctIndex) {
+            cout << "Correct!" << endl;
+            score++;
+        }
+        else {
+            cout << "Incorrect! The correct answer was: " << question["options"][correctIndex] << endl;
+        }
+
+        // Save state after each question
+        json state;
+        state["currentIndex"] = i + 1;
+        state["score"] = score;
+
+        ofstream stateOut("exam_state.json");
+        if (stateOut.is_open()) {
+            stateOut << state.dump(4);
+            stateOut.close();
+        }
+        else {
+            cout << "Error saving exam state." << endl;
+        }
+    }
+
+    cout << "Exam completed! You scored " << score << " out of " << questionCount << "." << endl;
+
+    // Resetting state file
+    remove("exam_state.json");
+
+    // Store the exam result
+    ExamRecord record;
+    record.studentID = this->RegisterID;
+    record.category = category;
+    record.studentName = this->fullName;
+    record.score = score;
+
+    // Load existing records
+    FileManager fm;
+    ifstream resultFile("exam_results.json");
+    json results;
+
+    if (resultFile.is_open()) {
+        resultFile >> results;
+        resultFile.close();
+    }
+
+    results.push_back(record.toJson());
+
+    ofstream outFile("exam_results.json");
+    if (outFile.is_open()) {
+        outFile << results.dump(4);
+        outFile.close();
+    }
+    else {
+        cout << "Error: Unable to open file for writing..." << endl;
+    }
+
+}
+
+
+
+
+void Student::ViewExamResults()
+{
+    ifstream resultFile("exam_results.json");
+    if (!resultFile.is_open()) {
+        cout << "Error opening exam_results.json!" << endl;
+        return;
+    }
+
+    json results;
+    resultFile >> results;
+    resultFile.close();
+
+    bool recordsFound = false;
+    int testCount = 0;
+
+    cout << "Exam Records for Student ID: " << RegisterID << endl;
+
+    for (const auto& record : results) {
+        if (record["id"] == RegisterID) { // Match by student ID
+            cout << "Category: " << record["category"] << ", Score: " << record["score"] << endl;
+            recordsFound = true;
+            testCount++;
+        }
+    }
+
+    if (recordsFound) {
+        cout << "Total Tests Taken: " << testCount << endl;
+    }
+    else {
+        cout << "No exam records found for Student ID: " << RegisterID << endl;
+    }
+}
+
+
+
 bool Student::UserExists(string username)
 {
 	for (const auto& user : users) {
@@ -109,12 +268,13 @@ void Student::Save()
 
 void Student::Load()
 {
-	json contentJson = filemanager.LoadUserInformationDataJson();
-	for (auto& j : contentJson) {
-		User user;
-		user.FromJson(j);
-		users.push_back(user);
-	}
+	users.clear(); // for clear old user file 
+    json contentJson = filemanager.LoadUserInformationDataJson();
+    for (auto& j : contentJson) {
+        User user;
+        user.FromJson(j);
+        users.push_back(user);
+    }
 } 
 
 

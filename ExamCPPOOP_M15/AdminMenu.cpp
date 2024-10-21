@@ -220,42 +220,16 @@ void AdminMenu::DeleteCategory()
 
 void AdminMenu::DeleteQuestionFromCategory()
 {
-    cout << "Available Categories:" << endl;
-    for (int i = 0; i < admin.tests.size(); i++) {
-        cout << i << ": " << admin.tests[i].category << endl; 
-    }
-
+    displayCategories();
     int testIndex;
+    int questionIndex;
     cout << "Enter the test index to delete a question from (0 for first test): ";
     cin >> testIndex;
-
-    if (testIndex < 0 || testIndex >= admin.tests.size()) {
-        cerr << "Error: Invalid test index." << endl;
-        ManageTestMenu(); 
-        return;
-    }
-
-    cout << "Questions in category \"" << admin.tests[testIndex].category << "\":" << endl;
-    for (int i = 0; i < admin.tests[testIndex].questions.size(); ++i) {
-        cout << i << ": " << admin.tests[testIndex].questions[i].questionText << endl; 
-    }
-
-    int questionIndex;
     cout << "Enter the question index to delete (0 for first question): ";
     cin >> questionIndex;
 
-    if (questionIndex < 0 || questionIndex >= admin.tests[testIndex].questions.size()) {
-        cerr << "Error: Invalid question index." << endl;
-        ManageTestMenu();
-        return;
-    }
-
-    try {
-        admin.deleteQuestionFromCategory(testIndex, questionIndex);
-    }
-    catch (const out_of_range& e) {
-        cerr << "Error: " << e.what() << endl;
-    }
+  
+    admin.deleteQuestionFromCategory(testIndex, questionIndex);
 
     ManageTestMenu(); 
 }
