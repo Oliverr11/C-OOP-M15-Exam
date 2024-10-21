@@ -47,7 +47,7 @@ void StudentMenu::ExamMenu()
         break;
     default:
         cout << "Invalid option. Please try again." << endl;
-        ExamMenu(); // Show exam menu again
+        ExamMenu(); 
         break;
     }   
 }
@@ -127,7 +127,7 @@ void StudentMenu::TakeExam()
 
         // Save state after each question
         json state;
-        state["currentIndex"] = i + 1; // Increment to next question
+        state["currentIndex"] = i + 1; 
         state["score"] = score;
 
         ofstream stateOut("exam_state.json");
@@ -140,7 +140,6 @@ void StudentMenu::TakeExam()
         }
     }
 
-    // After completing the exam
     cout << "Exam completed! You scored " << score << " out of " << questionCount << "." << endl;
 
     // Resetting state file
@@ -148,9 +147,9 @@ void StudentMenu::TakeExam()
 
     // Store the exam result
     ExamRecord record;
-    record.studentID = loginId; // Use the logged-in student's ID
+    record.studentID = loginId; 
     record.category = category;
-    record.studentName = name; // Include full name
+    record.studentName = name; 
     record.score = score;
 
     // Load existing records
@@ -179,30 +178,30 @@ void StudentMenu::TakeExam()
 
 void StudentMenu::ViewCategories()
 {
-    std::ifstream file("tests.json");
+    ifstream file("tests.json");
     if (!file.is_open()) {
-        std::cout << "Error opening tests.json!" << std::endl;
+        cout << "Error opening tests.json!" << endl;
         return;
     }
 
     json tests;
     file >> tests;
 
-    std::cout << "Number of Available Categories: " << tests.size() << std::endl;
+    cout << "Number of Available Categories: " << tests.size() << endl;
 
     // Optionally, you can print the category names as well
-    std::cout << "Available Categories:" << std::endl;
+    cout << "Available Categories:" << std::endl;
     for (const auto& item : tests) {
-        std::cout << "- " << item["category"] << std::endl;
+        cout << "- " << item["category"] << endl;
     }
     ExamMenu();
 }
 
 void StudentMenu::ViewExamResults()
 {
-    std::ifstream resultFile("exam_results.json");
+    ifstream resultFile("exam_results.json");
     if (!resultFile.is_open()) {
-        std::cout << "Error opening exam_results.json!" << std::endl;
+        cout << "Error opening exam_results.json!" << endl;
         return;
     }
 
@@ -213,21 +212,21 @@ void StudentMenu::ViewExamResults()
     bool recordsFound = false;
     int testCount = 0;
 
-    std::cout << "Exam Records for Student ID: " << loginId << std::endl;
+    cout << "Exam Records for Student ID: " << loginId << endl;
 
     for (const auto& record : results) {
         if (record["id"] == loginId) { // Match by student ID
-            std::cout << "Category: " << record["category"] << ", Score: " << record["score"] << std::endl;
+            cout << "Category: " << record["category"] << ", Score: " << record["score"] << endl;
             recordsFound = true;
             testCount++;
         }
     }
 
     if (recordsFound) {
-        std::cout << "Total Tests Taken: " << testCount << std::endl;
+        cout << "Total Tests Taken: " << testCount << endl;
     }
     else {
-        std::cout << "No exam records found for Student ID: " << loginId << std::endl;
+        cout << "No exam records found for Student ID: " << loginId << endl;
     }
 
     ExamMenu();

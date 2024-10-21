@@ -30,7 +30,7 @@ void FileManager::SaveExamRecord(vector<ExamRecord> records)
 		for (auto record : records) {
 			j.push_back(record.toJson());
 		}
-		file << j.dump(4); // Pretty print with an indent of 4 spaces
+		file << j.dump(4); 
 		file.close();
 	}
 	else {
@@ -62,7 +62,7 @@ void FileManager::saveTests(const vector<Test>& tests, const string& filename)
 	}
 	std::ofstream file(filename);
 	if (file.is_open()) {
-		file << j.dump(4); // Pretty print with 4 spaces
+		file << j.dump(4); 
 		file.close();
 	}
 	else {

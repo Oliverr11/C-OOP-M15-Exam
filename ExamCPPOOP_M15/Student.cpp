@@ -17,28 +17,27 @@ bool Student::Login(string LoginId, string LoginPassword)
 {
 	User* user = FindUserToLogin(LoginId, LoginPassword);
 	if (user == nullptr) {
-		// Retrieve full name
-		return true; // Login successful
+		return true; 
 	}
-	return false; // Login failed
+	return false; 
 }
 bool Student::DeleteStudent(string username)
 {
 	for (auto it = users.begin(); it != users.end(); it++) {
 		if (it->fullName == username) {
 			users.erase(it);
-			Save(); // Save changes after deletion
-			return true; // Account deleted successfully
+			Save(); 
+			return true; 
 		}
 	}
-	return false; // User not found
+	return false; 
 }
 void Student::UpdateUserID(string username, string newID)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.RegisterID = newID; // Update ID
-			Save(); // Save changes
+			user.RegisterID = newID; 
+			Save(); 
 			return;
 		}
 	}
@@ -48,8 +47,8 @@ void Student::UpdateUserPassword(string username, string newPassword)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.RegisterPassword = newPassword; // Update password
-			Save(); // Save changes
+			user.RegisterPassword = newPassword; 
+			Save(); 
 			return;
 		}
 	}
@@ -59,8 +58,8 @@ void Student::UpdateUserFullName(string username, string newFullName)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.fullName = newFullName; // Update full name
-			Save(); // Save changes
+			user.fullName = newFullName; 
+			Save(); 
 			return;
 		}
 	}
@@ -70,8 +69,8 @@ void Student::UpdateUserAddress(string username, string newAddress)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.address = newAddress; // Update address
-			Save(); // Save changes
+			user.address = newAddress; 
+			Save(); 
 			return;
 		}
 	}
@@ -81,8 +80,8 @@ void Student::UpdateUserPhone(string username, string newPhone)
 {
 	for (auto& user : users) {
 		if (user.fullName == username) {
-			user.phone = newPhone; // Update phone
-			Save(); // Save changes
+			user.phone = newPhone; 
+			Save(); 
 			return;
 		}
 	}
@@ -91,7 +90,7 @@ void Student::UpdateUserPhone(string username, string newPhone)
 bool Student::UserExists(string username)
 {
 	for (const auto& user : users) {
-		if (user.fullName == username) { // Adjust this condition if you want to check by RegisterID
+		if (user.fullName == username) { 
 			return true; // User exists
 		}
 	}

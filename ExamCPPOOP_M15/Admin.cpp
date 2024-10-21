@@ -20,13 +20,12 @@ bool Admin::Login(string loginId, string loginpassword)
 
 void Admin::CreateAccount(string RegisterID, string RegisterPassword, string fullname, string address, string phone)
 {
-    student.Register(RegisterID, RegisterPassword, fullname, address, phone); // Call the Register function
+    student.Register(RegisterID, RegisterPassword, fullname, address, phone); 
 }
 
 void Admin::DeleteAccount(string userName)
 {
     if (student.DeleteStudent(userName)) {
-        // Call a method to delete the student's exam records
         if (DeleteExamRecords(userName)) {
             cout << "Account and exam records deleted successfully!" << endl;
         }
@@ -51,12 +50,11 @@ bool Admin::DeleteExamRecords(string username)
     resultFile >> results;
     resultFile.close();
 
-    // Filter out the records for the user being deleted
     json updatedResults;
     bool recordsDeleted = false;
 
     for (const auto& record : results) {
-        if (record["id"] != username) { // Assuming 'id' holds the username
+        if (record["id"] != username) { 
             updatedResults.push_back(record);
         }
         else {
@@ -69,7 +67,7 @@ bool Admin::DeleteExamRecords(string username)
     if (outFile.is_open()) {
         outFile << updatedResults.dump(4);
         outFile.close();
-        return recordsDeleted; // Return true if any records were deleted
+        return recordsDeleted; 
     }
     else {
         cout << "Error: Unable to open file for writing..." << endl;
@@ -79,7 +77,6 @@ bool Admin::DeleteExamRecords(string username)
 
 void Admin::ChangeUserInformation(string userName)
 {
-    // Check if the user exists
     if (!student.UserExists(userName)) {
         cout << "Error: User does not exist." << endl;
         return;
@@ -113,7 +110,7 @@ void Admin::ChangeUserInformation(string userName)
         string newPassword;
         cout << "Enter new password: ";
         cin >> newPassword;
-        student.UpdateUserPassword(userName, newPassword); // Method to update user password
+        student.UpdateUserPassword(userName, newPassword); 
         cout << "Password updated successfully!" << endl;
         break;
     }
@@ -122,8 +119,8 @@ void Admin::ChangeUserInformation(string userName)
         cout << "Enter new full name: ";
         cin.ignore();
         getline(cin, newFullName);
-        student.UpdateUserFullName(userName, newFullName); // Method to update full name
-        UpdateExamRecords(oldId, oldId, oldName, newFullName); // Update name only
+        student.UpdateUserFullName(userName, newFullName); 
+        UpdateExamRecords(oldId, oldId, oldName, newFullName); 
         cout << "Full name updated successfully!" << endl;
         break;
     }
@@ -132,7 +129,7 @@ void Admin::ChangeUserInformation(string userName)
         cout << "Enter new address: ";
         cin.ignore();
         getline(cin, newAddress);
-        student.UpdateUserAddress(userName, newAddress); // Method to update address
+        student.UpdateUserAddress(userName, newAddress); 
         cout << "Address updated successfully!" << endl;
         break;
     }
@@ -141,7 +138,7 @@ void Admin::ChangeUserInformation(string userName)
         cout << "Enter new phone number: ";
         cin.ignore();
         getline(cin, newPhone);
-        student.UpdateUserPhone(userName, newPhone); // Method to update phone
+        student.UpdateUserPhone(userName, newPhone); 
         cout << "Phone number updated successfully!" << endl;
         break;
     }
@@ -167,17 +164,16 @@ void Admin::UpdateExamRecords(string oldID, string newID, string oldName, string
 
     bool updated = false;
 
-    // Iterate through each record and update the necessary fields
     for (auto& record : results) {
         cout << "Checking record with ID: " << record["id"] << " and Name: " << record["name"] << endl;
         if (record["id"] == oldID) {
             cout << "Updating ID from " << oldID << " to " << newID << endl;
-            record["id"] = newID; // Update ID
+            record["id"] = newID; 
             updated = true;
         }
         if (record["name"] == oldName) {
             cout << "Updating name from " << oldName << " to " << newName << endl;
-            record["name"] = newName; // Update name
+            record["name"] = newName; 
             updated = true;
         }
     }
@@ -185,7 +181,7 @@ void Admin::UpdateExamRecords(string oldID, string newID, string oldName, string
     if (updated) {
         ofstream outFile("exam_results.json");
         if (outFile.is_open()) {
-            outFile << results.dump(4); // Pretty print with an indent of 4 spaces
+            outFile << results.dump(4); 
             outFile.close();
             cout << "Exam records updated successfully!" << endl;
         }
@@ -225,8 +221,8 @@ void Admin::deleteCategory(int testIndex)
     if (testIndex < 0 || testIndex >= tests.size()) {
         throw out_of_range("Test index is out of range.");
     }
-    tests.erase(tests.begin() + testIndex); // Remove the category at the specified index
-    fm.saveTests(tests, fileName); // Save the updated tests to the file
+    tests.erase(tests.begin() + testIndex); 
+    fm.saveTests(tests, fileName); 
     cout << "Category deleted successfully!" << endl;
 }
 
@@ -238,8 +234,8 @@ void Admin::deleteQuestionFromCategory(int testIndex, int questionIndex)
     if (questionIndex < 0 || questionIndex >= tests[testIndex].questions.size()) {
         throw out_of_range("Question index is out of range.");
     }
-    tests[testIndex].questions.erase(tests[testIndex].questions.begin() + questionIndex); // Remove the question
-    fm.saveTests(tests, fileName); // Save the updated tests to the file
+    tests[testIndex].questions.erase(tests[testIndex].questions.begin() + questionIndex); 
+    fm.saveTests(tests, fileName); 
     cout << "Question deleted successfully!" << endl;
 }
 
@@ -253,11 +249,11 @@ void Admin::displayCategories()
 
 void Admin::addExamRecord(string studentId, string category, string name, int score)
 {
-    ExamRecord newRecord(studentId, category, name, score); // Ensure name is being passed
+    ExamRecord newRecord(studentId, category, name, score); 
     vector<ExamRecord> records;
-    fm.LoadExamRecord(records); // Load existing records
-    records.push_back(newRecord); // Add the new record
-    fm.SaveExamRecord(records); // Save updated records
+    fm.LoadExamRecord(records); 
+    records.push_back(newRecord); 
+    fm.SaveExamRecord(records); 
     cout << "Exam record added for " << name << " with score: " << score << endl;
 }
 

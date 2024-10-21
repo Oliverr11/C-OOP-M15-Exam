@@ -90,14 +90,14 @@ void AdminMenu::CreateAccount()
     cout << "Enter Register Password: ";
     cin >> RegisterPassword;
     cout << "Enter Full Name: ";
-    cin.ignore(); // Clear the newline character from the input buffer
+    cin.ignore(); 
     getline(cin, fullname);
     cout << "Enter Address: ";
     getline(cin, address);
     cout << "Enter Phone: ";
     getline(cin, phone);
-    admin.CreateAccount(RegisterID, RegisterPassword, fullname, address, phone); // Call the Register function
-    ModifyUserMenu(); // Return to the menu after registration
+    admin.CreateAccount(RegisterID, RegisterPassword, fullname, address, phone); 
+    ModifyUserMenu();
 }
 
 void AdminMenu::DeleteAccount()
@@ -130,20 +130,18 @@ void AdminMenu::AddCategory()
 
 void AdminMenu::AddQuestionCategory()
 {
-    // Display available categories
     cout << "Available Categories:" << endl;
-    for (size_t i = 0; i < admin.tests.size(); ++i) {
-        cout << i << ": " << admin.tests[i].category << endl; // Show category index and name
+    for (int i = 0; i < admin.tests.size(); ++i) {
+        cout << i << ": " << admin.tests[i].category << endl; 
     }
 
     int testIndex;
     cout << "Enter the test index to add a question (0 for first test): ";
     cin >> testIndex;
 
-    // Validate test index
     if (testIndex < 0 || testIndex >= admin.tests.size()) {
         cerr << "Error: Invalid test index." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu();
         return;
     }
 
@@ -153,17 +151,16 @@ void AdminMenu::AddQuestionCategory()
     int correctAnswer;
 
     cout << "Enter question text: ";
-    cin.ignore(); // Ignore the newline character from previous input
+    cin.ignore(); 
     getline(cin, questionText);
 
     cout << "Enter the number of options: ";
     int numOptions;
     cin >> numOptions;
 
-    // Validate number of options
     if (numOptions < 2) {
         cerr << "Error: At least two options are required." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu(); 
         return;
     }
 
@@ -177,10 +174,9 @@ void AdminMenu::AddQuestionCategory()
     cout << "Enter the index of the correct answer (starting from 0): ";
     cin >> correctAnswer;
 
-    // Validate correct answer index
     if (correctAnswer < 0 || correctAnswer >= numOptions) {
         cerr << "Error: Correct answer index is out of range." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu(); 
         return;
     }
 
@@ -192,25 +188,23 @@ void AdminMenu::AddQuestionCategory()
         cerr << "Error: " << e.what() << endl;
     }
 
-    ManageTestMenu(); // Return to the menu
+    ManageTestMenu(); 
 }
 
 void AdminMenu::DeleteCategory()
 {
-    // Display available categories
     cout << "Available Categories:" << endl;
     for (size_t i = 0; i < admin.tests.size(); ++i) {
-        cout << i << ": " << admin.tests[i].category << endl; // Show category index and name
+        cout << i << ": " << admin.tests[i].category << endl; 
     }
 
     int testIndex;
     cout << "Enter the test index to delete (0 for first test): ";
     cin >> testIndex;
 
-    // Validate test index
     if (testIndex < 0 || testIndex >= admin.tests.size()) {
         cerr << "Error: Invalid test index." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu(); 
         return;
     }
 
@@ -221,42 +215,38 @@ void AdminMenu::DeleteCategory()
         cerr << "Error: " << e.what() << endl;
     }
 
-    ManageTestMenu(); // Return to the menu
+    ManageTestMenu(); 
 }
 
 void AdminMenu::DeleteQuestionFromCategory()
 {
-    // Display available categories
     cout << "Available Categories:" << endl;
-    for (size_t i = 0; i < admin.tests.size(); ++i) {
-        cout << i << ": " << admin.tests[i].category << endl; // Show category index and name
+    for (int i = 0; i < admin.tests.size(); i++) {
+        cout << i << ": " << admin.tests[i].category << endl; 
     }
 
     int testIndex;
     cout << "Enter the test index to delete a question from (0 for first test): ";
     cin >> testIndex;
 
-    // Validate test index
     if (testIndex < 0 || testIndex >= admin.tests.size()) {
         cerr << "Error: Invalid test index." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu(); 
         return;
     }
 
-    // Display available questions for the selected category
     cout << "Questions in category \"" << admin.tests[testIndex].category << "\":" << endl;
-    for (size_t i = 0; i < admin.tests[testIndex].questions.size(); ++i) {
-        cout << i << ": " << admin.tests[testIndex].questions[i].questionText << endl; // Show question index and text
+    for (int i = 0; i < admin.tests[testIndex].questions.size(); ++i) {
+        cout << i << ": " << admin.tests[testIndex].questions[i].questionText << endl; 
     }
 
     int questionIndex;
     cout << "Enter the question index to delete (0 for first question): ";
     cin >> questionIndex;
 
-    // Validate question index
     if (questionIndex < 0 || questionIndex >= admin.tests[testIndex].questions.size()) {
         cerr << "Error: Invalid question index." << endl;
-        ManageTestMenu(); // Return to the menu
+        ManageTestMenu();
         return;
     }
 
@@ -267,7 +257,7 @@ void AdminMenu::DeleteQuestionFromCategory()
         cerr << "Error: " << e.what() << endl;
     }
 
-    ManageTestMenu(); // Return to the menu
+    ManageTestMenu(); 
 }
 
 void AdminMenu::displayCategories()

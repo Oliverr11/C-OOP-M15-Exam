@@ -15,12 +15,12 @@ void Test::addQuestion(string questionText, vector<string> options, int correctA
 int Test::evaluateAnswer(vector<int> answers)
 {
     int correctCount = 0;
-    for (size_t i = 0; i < answers.size(); ++i) {
+    for (int i = 0; i < answers.size(); ++i) {
         if (i < questions.size() && answers[i] == questions[i].correctAnswer) {
             ++correctCount;
         }
     }
-    return correctCount; // Return the number of correct answers
+    return correctCount; 
 }
 
 double Test::calculateScore(int correctCount)

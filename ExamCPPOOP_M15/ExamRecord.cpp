@@ -12,7 +12,7 @@ json ExamRecord::toJson()
 {
     return {
              {"id", studentID},
-             {"name", studentName}, // Include name in the JSON representation
+             {"name", studentName},
              {"category", category},
              {"score", score}
     };
